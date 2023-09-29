@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vectores - USB</title>
+    <link rel="icon" type="image/png" href="../img/icon.png">
+    <!-- Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/gameScreen.css">
+        <!--THREE_JS-->
+    <script src="../libs/three.js-master/build/three.min.js"></script>
+    <script src="../libs/controls/OrbitControls.js"></script>
+
+    <!-- OBJ / MTL -->
+    <script src="../libs/load/OBJLoader.js"></script>
+    <script src="../libs/load/MTLLoader.js"></script>
+
+    <!--Others-->
+    <script src="../libs/others/Stats.js"></script>
+    <script src="../libs/others/DAT.GUI.min.js"></script>
+
+    <!--GLTF LOADER-->
+    <script src="../libs/load/DRACOLoader.js"></script>
+    <script src="../libs/load/GLTFLoader.js"></script>
+
+    <!--Logic-->
+    <script src="../js/main.js"></script>
+
+</head>
+
+<body onload="createThreeJs()">
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../../index.html">
+                    <img src="../img/Logo.png" alt="Logo" width="50">
+                </a>
+            </div>
+                <div class="container-fluid">
+                    Points: 0
+                </div>
+                <div class="container-fluid">
+                    Timer: 60
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Canvas de Three.js -->
+    <canvas id="app"></canvas>
+
+    <!-- Contenido de la página -->
+    <div id="winnerScreen" style="display: none;">
+        Winner Screen
+    </div>
+
+    <div id="loserScreen" style="display: none;">
+        Loser Screen
+    </div>
+
+    <audio controls>
+        <source src="../sounds/backgroundSound.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Footer -->
+    <footer
+        style="background-color: #b696bd; color: white; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%;">
+        <p>&copy; 2023 Vectores - USB. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS (debería ir al final del body) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
